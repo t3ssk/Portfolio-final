@@ -1,0 +1,291 @@
+@import "reset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;700&family=Source+Serif+Pro:wght@600;900&display=swap');
+$primary-blue: #2517D2;
+$secondary-gray: rgb(226, 226, 226);
+$font-1: 'Roboto Mono';
+$font-2: 'Source Serif';
+.mobile{display: none;}
+/* INDEX
+1. ZÁHLAVÍ A ZÁPATÍ
+    1 a) barvy
+    1 b) typografie
+    1 c) pozice
+    1 d) styly
+    1 e) animace
+    1 f) MEDIA QUERIES
+2. INDEX HTML
+    2 a) barvy
+    2 b) typografie
+    2 c) pozice
+    2 d) styly
+    2 e) animace
+    2 f) MEDIA QUERIES
+*/
+
+
+/*1. ZÁHLAVÍ A ZÁPATÍ*/
+/* 1 a) barvy*/
+body {
+    background-color: white;
+    color: #3D4144;
+}
+nav a{
+    color: black;
+}
+a:hover, a:active{
+    color: $primary-blue;
+    background-image: url(../assets/images/zakrouzkovani.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+nav.links a, .zpet a {
+    color: $primary-blue;
+}
+nav.links a:hover , .zpet a:hover {
+    color: black;
+    background: initial;
+}
+.messenger{
+    background: $primary-blue;
+    background: radial-gradient(circle, rgb(47, 103, 194) 4%, rgba(37,23,210,1) 62%);
+}
+.messenger i {
+    color: white;
+}
+
+footer{
+    background-color: $secondary-gray ;
+}
+footer i{
+    color: $primary-blue;
+}
+/* 1 b) typografie*/
+body{
+    font-family: $font-1;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+nav.desktop{
+    font-size: 1.5rem;
+}
+
+nav.links p {
+    font-size: 1.3rem;}
+
+.messenger i {
+    font-size: 3rem;
+}
+footer {
+    font-size: 0.8rem;
+    text-align: center;
+}
+.zpet{
+    font-size: 10px;
+}
+/*1 c) pozice*/
+body{
+    width: 100vw;
+    overflow: hidden;
+}
+nav.desktop{
+    position: absolute;
+    top: 10vh;
+    width: 100vw;
+}
+
+ul.left{
+    position: relative;
+    width: 100%;
+    left: 20vw;
+}
+ul.right{
+    position: relative;
+    width: 100%;
+    left: 60vw;
+    margin-top: -1.5%;
+}
+nav.desktop li {
+    display: inline;
+    padding-right: 30px;
+
+}
+.logo{
+    position: relative;
+    margin-top: -2vh;
+    left: 40.5vw;
+    width: 200px;
+    height: 200px;
+}
+.logo svg{
+    width: 100%;
+}
+
+nav.links {
+    position: fixed;
+    margin-left: 97vw;
+    margin-top: 5%;
+}
+
+nav.links p {
+    padding: 10px;
+}
+.messenger{
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    position: fixed;
+    left: 90vw;
+    top: 85vh;
+    z-index: 20;
+}
+.messenger p{
+    padding-top: 15px;
+    text-align: center ;
+
+}
+footer li{
+    display: inline;
+}
+footer li::after{
+    content: "|";
+}
+footer{
+    padding: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+}
+p {
+    padding-top: 1%;
+}
+
+.zpet {
+    position: absolute;
+    bottom: 7%;
+    left: 60%;
+    width: 12%;
+    z-index: 9;
+    padding: 70px;
+}
+
+/*1 d) styly*/
+.messenger{
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(5, 5, 5, 0.363);
+}
+.zpet{
+    background-image: url(../assets/images/šipkanahoru.svg);
+    background-size: contain;
+    background-position: 2.5vw;
+    background-repeat: no-repeat;
+}
+/*1 e) animace*/
+
+.rotate{
+
+    transform: rotate(0deg);
+    transform-origin: 205px 155px;
+}
+
+.rotate:hover{
+    animation: 2.5s kouleni cubic-bezier(.36,.68,.94,.72) infinite;
+}
+@keyframes kouleni {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+            transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/*1 f) MEDIA QUERIES*/
+@media only screen and (max-width: 1050px){
+    ul.left{
+        left: 10vw;
+    }
+    ul.right{
+        left: 70vw;
+    }
+    nav.links {
+        margin-left: 95vw;    
+    }
+}
+
+@media only screen and (max-width: 760px){
+    .desktop{
+        display:none;
+    }
+    .mobile{
+        display:block;
+    }
+    .logo{
+        width: 150px;
+        height: 150px;
+        top: -12vh;
+        left: 70vw;
+    }
+    .menu{
+        border: none;
+        background-color: white;
+        color: $primary-blue;
+        font-size: 1.5rem;
+        position: relative;
+        top: 2vh;
+        left: 2vh;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .navigace{
+        position: absolute;
+        width: 90vw;
+        height: 120vh;
+        top: 0vh;
+        background-color: $primary-blue;
+        z-index: 10;
+        transform: translateX(-88vh);
+        transition: 1s cubic-bezier(1, 0.165, 0.82, 0.075);
+    }
+    .navigace.active{
+        transform: translateX(0px);
+        transition: 1s cubic-bezier(1, 0.165, 0.82, 0.075);
+    }
+    .navigace a{
+        color: white;
+    }
+    .navigace ul {
+        position: relative;
+        margin-top: 120px;
+    }
+    .navigace a {
+ 
+        font-size: 3rem;
+        padding: 20px 20px 20px 80px;
+        line-height: 6rem;
+    }
+   div.close{
+       color: white;
+       position: absolute;
+        left: 80vw;
+        top: 3vh;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+}
+
+/*2. INDEX HTML*/
+/*2 a) barvy*/
+/*2 b) typografie*/
+/*2 c) pozice*/
+/*2 d) styly*/
+/*2 e) animace*/
+/*2 f) MEDIA QUERIES*/
