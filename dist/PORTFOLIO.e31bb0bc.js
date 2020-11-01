@@ -2730,6 +2730,19 @@ var scroll = new _locomotiveScroll.default({
   getDirection: true,
   useKeyboard: true
 });
+var submit = document.querySelector('.poslat');
+var form = document.querySelector('.form');
+submit.addEventListener('click', function () {
+  var name = document.querySelector('#name').value;
+  var surname = document.querySelector('#surname').value;
+  var email = document.querySelector('#mail').value;
+  var company = document.querySelector('#company').value;
+  var about = document.querySelector('#about-company').value;
+  var socials = document.querySelector('#socials').value;
+  var details = document.querySelector('#details').value;
+  var message = "Jmenuji%20se%20".concat(name, "%20").concat(surname, "\n a m\u016Fj email je ").concat(email, ".Firma: ").concat(company, ". O n\xE1s: ").concat(about, ". Na\u0161e soci\xE1ln\xED s\xEDt\u011B: ").concat(socials, ". A n\u011Bco v\xEDc o n\xE1s: ").concat(details);
+  window.open('mailto:te.konecna@icloud.com?subject=Žádost o spolupráci&body=' + message);
+});
 },{"locomotive-scroll":"node_modules/locomotive-scroll/dist/locomotive-scroll.esm.js"}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

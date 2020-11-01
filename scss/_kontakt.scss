@@ -1,0 +1,150 @@
+
+/* INDEX
+1. ZÁHLAVÍ A ZÁPATÍ
+    1 a) barvy
+    1 b) typografie
+    1 c) pozice
+    1 d) styly
+    1 e) animace
+    1 f) MEDIA QUERIES
+2. INDEX HTML
+    2 a) barvy
+    2 b) typografie
+    2 c) pozice
+    2 d) styly
+    2 e) animace
+    2 f) MEDIA QUERIES
+*/
+
+.ozvete-se {
+    background-color: $primary-blue;
+    padding: 5ch;
+    text-align: center;
+    color: white;
+}
+
+.ozvete-se a {
+    color: $secondary-gray;
+}
+.ozvete-se p{
+    position: relative;
+    z-index: 11;
+}
+.ozvete-se p, .formular p {
+    width: 70ch;
+    margin: auto;
+}
+
+.ozvete-se a:hover, .ozvete-se a:active{
+    color: black;
+}
+
+.ozvete-se h1 {
+    font-family: $font-2;
+    font-size: 2rem;
+    font-weight: 900;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    padding: 1.5ch;
+}
+.sipka{
+    width: 400px;
+    height: 150px;
+    background-image: url(../assets/images/sipka.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    position: absolute;
+    margin-top: -80px;
+    left: 62vw;
+    z-index: 8;
+}
+
+.formular{
+    margin-top: 3ch;
+    padding: 5ch;
+    background-color: $secondary-gray;
+    width: 100vw;
+    height: auto;
+}
+.formular h2, .formular h3{
+    text-align: center;
+    padding-bottom: 1.5ch;
+}
+.formular h2, .formular h3, label{
+    text-transform: none;
+    font-family: $font-2;
+    color: $primary-blue;
+}
+label{
+    text-justify: left;
+    position: relative;
+    transform: translateY(10px);
+}
+
+.formular h2{
+    font-size: 1.8rem;
+}
+
+.formular h3{
+    font-size: 1.5rem;
+    padding-top: 3ch;
+}
+
+input[type=submit]{
+    background-color: $primary-blue;
+    color: white;
+    font-family: $font-1;
+    font-size: 1.4rem;
+    padding: 1.3ch 3ch;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 17px transparentize($color: $primary-blue, $amount: 0.3);
+    margin-left: 43vw;
+}
+input[type=submit]:hover{
+    background-color: darkblue;
+}
+input[type=submit]:active{
+    background-color: darkblue;
+}
+input[type=submit]:focus{
+    box-shadow: 0 0 13px transparentize($color: $primary-blue, $amount: 0.5);
+}
+
+a:focus {
+    outline:0;
+    border-bottom: 5px solid $primary-blue;
+}
+
+input:focus, textarea:focus {
+    outline:0;
+    box-shadow: 0 0 7px transparentize($color: $primary-blue, $amount: 0.5);
+}
+
+.form-row, .form-row-wide{
+    width: 80vw;
+    margin: auto;
+}
+
+.form-row{
+    display: flex;
+    justify-items: stretch;
+    justify-content: space-between;
+}
+.form-item{
+    width: 48%;
+}
+input[type=text], input[type=email], textarea {
+    font-family: $font-1;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+  }
