@@ -131,7 +131,6 @@ nav.links {
     margin-left: 97vw;
     margin-top: 5%;
     z-index: 50;
-    mix-blend-mode: difference;
 }
 
 nav.links p {
@@ -202,9 +201,6 @@ p {
 @keyframes kouleni {
     0%{
         transform: rotate(0deg);
-    }
-    50%{
-            transform: rotate(180deg);
     }
     100%{
         transform: rotate(360deg);
@@ -621,5 +617,44 @@ ol li a:hover, .cv-sekce li a:active {
     }
     .zpet{
         left:50% ;
+    }
+}
+
+
+.rekonstrukce{
+    width: 80vw;
+    height: 30vh;
+    display: flex;
+    position: relative;
+    left: 12vw;
+    padding-top: 20vh;
+    justify-items: center;
+}
+.spinner{
+    color: $primary-blue;
+    font-size: 4rem;
+    position: relative;
+    left: 30%;
+    margin-top: -0.5ch;
+}
+.rekonstrukce-item{
+    width: 40%;
+}
+
+.fa-spinner {
+    animation: 2s spinner linear infinite;
+}
+
+@keyframes spinner {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);  
+    }
+    50%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(360deg);
     }
 }
