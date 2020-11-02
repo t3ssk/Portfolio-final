@@ -138,7 +138,7 @@ nav.desktop li {
 
 nav.links {
     position: fixed;
-    margin-left: 97.5vw;
+    margin-left: 96.5vw;
     margin-top: 5%;
     z-index: 50;
 }
@@ -220,7 +220,7 @@ p {
 }
 
 /*1 f) MEDIA QUERIES*/
-@media only screen and (max-width: 1050px){
+@media only screen and (max-width: 1200px){
     ul.left{
         left: 10vw;
     }
