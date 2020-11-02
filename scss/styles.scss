@@ -594,6 +594,8 @@ ol li a:hover, .cv-sekce li a:active {
     .hero{
         height: 800px;
         grid-template-rows: repeat(6, 1fr);
+        margin-left: 0;
+        
     }
     .ctverec{
         display: none;
