@@ -59,6 +59,7 @@ nav.links a:hover , .zpet a:hover {
 .messenger{
     background: $primary-blue;
     background: radial-gradient(circle, rgb(47, 103, 194) 4%, rgba(37,23,210,1) 62%);
+    display: none;
 }
 .messenger i {
     color: white;
@@ -173,8 +174,6 @@ footer li::after{
 footer{
     padding: 40px;
     width: 100%;
-    position: relative;
-    bottom: 0%;
 }
 p {
     padding-top: 1%;
@@ -182,7 +181,6 @@ p {
 
 .zpet {
     position: relative;
-    bottom: 7%;
     left: 60%;
     width: 12%;
     z-index: 9;

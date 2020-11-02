@@ -15,7 +15,7 @@ const scroll = new LocomotiveScroll({
     useKeyboard: true
 });
 
-
+window.addEventListener('load',  () => { scroll.update(); ScrollTrigger.update; });
 
 const submit = document.querySelector('.poslat')
 const form = document.querySelector('.form')
