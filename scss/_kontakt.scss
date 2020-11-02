@@ -31,8 +31,9 @@
     z-index: 11;
 }
 .ozvete-se p, .formular p {
-    width: 70ch;
+    width: 65vw;
     margin: auto;
+    text-align: center;
 }
 
 .ozvete-se a:hover, .ozvete-se a:active{
@@ -57,13 +58,14 @@
     pointer-events: none;
     position: absolute;
     margin-top: -80px;
-    left: 62vw;
+    left: 52vw;
     z-index: 8;
+    overflow: hidden;
 }
 
 .formular{
     margin-top: 3ch;
-    padding: 5ch;
+    padding: 5ch 0 5ch 0;
     background-color: $secondary-gray;
     width: 100vw;
     height: auto;
@@ -85,6 +87,8 @@ label{
 
 .formular h2{
     font-size: 1.8rem;
+    width: 75vw;
+    margin: auto;
 }
 
 .formular h3{
@@ -148,3 +152,38 @@ input[type=text], input[type=email], textarea {
     margin-bottom: 16px; 
     resize: vertical;
   }
+
+  @media only screen and (max-width:650px){
+    input[type=submit]{
+        margin-left: 35vw;
+    }
+    
+  }
+  @media only screen and (max-width:750px){
+    .form-row{
+        display: block;
+    }
+    .form-item{
+        width: 100%;
+    }
+
+    .sipka{
+        display: none;
+    }
+    .formular
+    {padding: 5ch 0ch;}
+  }
+  @media only screen and (max-width:850px){
+    
+ 
+    input[type=submit]{
+        margin-left: 27vw;
+    }
+  }
+  @media only screen and (max-width:440px){
+    input[type=submit]{
+        margin-left: 20vw;
+    }
+    
+  }
+

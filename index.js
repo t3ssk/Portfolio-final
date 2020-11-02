@@ -15,6 +15,8 @@ const scroll = new LocomotiveScroll({
     useKeyboard: true
 });
 
+
+
 const submit = document.querySelector('.poslat')
 const form = document.querySelector('.form')
 

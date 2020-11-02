@@ -30,6 +30,15 @@ body {
     background-color: white;
     color: #3D4144;
 }
+
+::selection{
+    background-color: $primary-blue;
+    color: white;
+}
+
+a {
+    color: $primary-blue;
+}
 nav a{
     color: black;
 }
@@ -128,7 +137,7 @@ nav.desktop li {
 
 nav.links {
     position: fixed;
-    margin-left: 98vw;
+    margin-left: 97.5vw;
     margin-top: 5%;
     z-index: 50;
 }
@@ -263,7 +272,7 @@ p {
         height: 120vh;
         top: 0vh;
         background-color: $primary-blue;
-        transform: translateX(-100vh);
+        transform: translateX(-100vw);
         transition: 0.2s cubic-bezier(1, 0.165, 0.82, 0.075);
     }
     .navigace.active{
@@ -408,7 +417,7 @@ p {
     height: 50px;
     position: absolute;
     margin-top: -40px;
-    margin-left: 10vw;
+    margin-left: 50vw;
 }
 .CV-sekce hr{
     padding-top: 60px;
@@ -498,12 +507,7 @@ ol li a:hover, .cv-sekce li a:active {
     background-image: url(../assets/images/podtrzeni.svg);
     background-size: contain;
 }
-.item:hover, .item:active{
-    background-image: url(../assets/images/krouzek.svg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+
 /*2 e) animace*/
 /*2 f) MEDIA QUERIES*/
 @media only screen and (max-width: 1100px){
@@ -667,3 +671,8 @@ ol li a:hover, .cv-sekce li a:active {
 
 @import 'tvorba.scss';
 @import 'kontakt.scss';
+
+
+
+
+
