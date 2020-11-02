@@ -226,5 +226,15 @@
     }
     .porfolio-card{
         display: block;
+        padding: 20px 15px;
+        height: auto;
+    }
+    .porfolio-card h2{
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    .porfolio-card p {
+        font-size: 0.9rem;
+        width: 80%;
     }
 }
