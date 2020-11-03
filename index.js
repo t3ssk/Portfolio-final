@@ -9,7 +9,6 @@ import LocomotiveScroll from 'locomotive-scroll';
 const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
-    smoothMobile: true,
     getSpeed: true,
     getDirection: true,
     useKeyboard: true
