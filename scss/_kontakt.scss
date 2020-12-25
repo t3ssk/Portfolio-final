@@ -104,7 +104,6 @@ input[type=submit]{
     padding: 1.3ch 3ch;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 0 17px transparentize($color: $primary-blue, $amount: 0.3);
     margin-left: 43vw;
 }
 input[type=submit]:hover{
@@ -113,18 +112,16 @@ input[type=submit]:hover{
 input[type=submit]:active{
     background-color: darkblue;
 }
-input[type=submit]:focus{
-    box-shadow: 0 0 13px transparentize($color: $primary-blue, $amount: 0.5);
-}
+
 
 a:focus {
     outline:0;
     border-bottom: 5px solid $primary-blue;
 }
 
-input:focus, textarea:focus {
-    outline:0;
-    box-shadow: 0 0 7px transparentize($color: $primary-blue, $amount: 0.5);
+input:focus, textarea:focus, input:active    {
+    outline:1   ;
+    border: 2px solid $primary-blue;
 }
 
 .form-row, .form-row-wide{
